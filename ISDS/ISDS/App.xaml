@@ -1,8 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ISDS"
              x:Class="ISDS.App">
     <Application.Resources>
-
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="#CEFFFFFF" />
+        </Style>
+        <Style TargetType="{x:Type local:MyEntry}">
+            <Setter Property="Margin">
+                <OnPlatform Android="25,0,22,0"
+                            iOS="12,5"/>
+            </Setter>
+            <Setter Property="PlaceholderColor" Value="#73666666"/>
+            <Setter Property="TextColor" Value="#555555"/>
+        </Style>
+        <Style TargetType="Frame">
+            <Setter  Property="CornerRadius">
+                <Setter.Value>
+                    <OnPlatform Android="24"
+                                iOS="21"/>
+                </Setter.Value>
+            </Setter>
+            <Setter  Property="VerticalOptions" Value="Center"/>
+            <Setter  Property="Margin" Value="15,0"/>
+            <Setter Property="HasShadow" Value="False"/>
+            <Setter  Property="Padding">
+                <Setter.Value>
+                    <OnPlatform Android="0,0,0,-3"
+                                iOS="5"/>
+                </Setter.Value>
+            </Setter>
+            <Setter  Property="BackgroundColor" Value="#D8ffffff"/>
+        </Style>
     </Application.Resources>
 </Application>

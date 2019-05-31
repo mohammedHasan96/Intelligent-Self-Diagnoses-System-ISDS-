@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:uc="clr-namespace:ISDS.Views.UserControls"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="#d9d9d9"
+            android:TabbedPage.BarSelectedItemColor="#03A9F4"
+            x:Class="ISDS.Views.VDiseaseDetials">
+    <uc:UCDiseaseDetails x:Name="Details" Title="DISEASE DETAILS  " Icon="details.png"/>
+    <uc:UCTreatmentOptions x:Name="Treatment" Title="TREATMENT OPTIONS" Icon="treatment.png"/>
+</TabbedPage>

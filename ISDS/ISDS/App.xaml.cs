@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ISDS.Utils;
+using System;
+using System.Threading;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +13,16 @@ namespace ISDS
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            new Thread(() =>
+            {
+                DataModel.Initialize();
+            }).Start();
+
+            MainPage = new NavigationPage(new VLogin())
+            {
+                BarBackgroundColor = Color.FromHex("#1FCABB"),
+                BarTextColor = Color.White,
+            };
         }
 
         protected override void OnStart()

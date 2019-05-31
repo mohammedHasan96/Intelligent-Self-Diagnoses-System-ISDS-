@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISDS.Views.UserControls.UCTreatmentOptions">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="10,15,3,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="" 
+                   x:Name="DiseaseName"
+                   x:FieldModifier="public" 
+                   Grid.Row="0"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="#444444"
+                   FontSize="22"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"/>
+                <Label Text="Ethanol intoxication | acute alcohol intoxication"
+                   Grid.Row="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="#444444"
+                   IsVisible="False"
+                   HorizontalTextAlignment="Center"/>
+
+                <Frame BackgroundColor="#444444"
+                   BorderColor="#444444"
+                   Grid.Row="2"
+                   HeightRequest="2"
+                   Padding="0"
+                   CornerRadius="0"
+                   VerticalOptions="Center"
+                   Margin="10"/>
+
+                <Label Text="Treatments May Include" 
+                   Grid.Row="3"
+                   TextColor="Black"
+                   FontSize="22"/>
+                <Label Text="" 
+                   x:Name="TreatmentsMayInclude"
+                   x:FieldModifier="public"
+                   Grid.Row="4"
+                   TextColor="Black"
+                   FontSize="14"
+                   Margin="0,0,0,15"/>
+                <Label Text="Self Care" 
+                   Grid.Row="5"
+                   TextColor="Black"
+                   FontSize="22"/>
+                <Label Text="" 
+                   x:Name="SelfCare"
+                   x:FieldModifier="public"
+                   Grid.Row="6"
+                   TextColor="Black"
+                   FontSize="14"
+                   Margin="0,0,0,15"/>
+                <Label Text="Made worsen By" 
+                   Grid.Row="7"
+                   TextColor="Black"
+                   FontSize="22"/>
+                <Label Text="" 
+                   x:Name="WorsenBy"
+                   x:FieldModifier="public"
+                   Grid.Row="8"
+                   TextColor="Black"
+                   FontSize="14"
+                   Margin="0,0,0,15"/>
+                <Label Text="Diagnosed By" 
+                   Grid.Row="9"
+                   TextColor="Black"
+                   FontSize="22"/>
+                <Label Text="" 
+                   x:Name="DiagnosedBy"
+                   x:FieldModifier="public"
+                   Grid.Row="10"
+                   TextColor="Black"
+                   FontSize="14"
+                   Margin="0,0,0,15"/>
+                <Label Text="When to See Your Doctor" 
+                   Grid.Row="11"
+                   TextColor="Black"
+                   FontSize="22"/>
+                <Label Text="" 
+                   x:Name="WhenToSeeYourDoctor"
+                   x:FieldModifier="public"
+                   Grid.Row="12"
+                   TextColor="Black"
+                   FontSize="14"
+                   Margin="0,0,0,15"/>
+                <Label Text="Questions to Ask Your Doctor" 
+                   Grid.Row="13"
+                   TextColor="Black"
+                   FontSize="22"/>
+                <Label Text="" 
+                   x:Name="QuestionsToAskYourDoctor"
+                   x:FieldModifier="public"
+                   Grid.Row="14"
+                   TextColor="Black"
+                   FontSize="14"
+                   Margin="0,0,0,15"/>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

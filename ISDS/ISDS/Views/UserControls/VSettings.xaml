@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISDS.Views.UserControls.VSettings">
+    <ContentPage.Content>
+        <TableView HasUnevenRows="True">
+            <TableRoot>
+                <TableSection Title="Settings">
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0"
+                                   BackgroundColor="Accent"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Margin="10"
+                                   HeightRequest="60"
+                                   WidthRequest="60"/>
+                            <Label Grid.Row="1"
+                                   Text="Example@exm.com"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   Margin="10,0,10,10"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell>
+                        <Label Text="Edit Personal Data" 
+                               Margin="10"/>
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Notifications"
+                                   VerticalOptions="Center"
+                                   Grid.Column="0"
+                                   Margin="10"/>
+                            <Switch Grid.Column="2"
+                                    Margin="10"/>
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

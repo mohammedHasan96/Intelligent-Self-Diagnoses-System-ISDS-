@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISDS.Views.VRegister"
+             xmlns:local="clr-namespace:ISDS"
+             BackgroundImage="isdsbackground.png">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal"
+                     Margin="5"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <Label Text="Registering"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="18"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Resources>
+        <!--<Style x:Key="cr" TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="Accent"/>
+            <Setter Property="Margin" Value="0,10"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="WidthRequest">
+                <OnPlatform Android="10"
+                            iOS="20"/>
+            </Setter>
+            <Setter Property="HeightRequest">
+                <OnPlatform Android="10"
+                            iOS="20"/>
+            </Setter>
+            <Setter Property="CornerRadius">
+                <OnPlatform Android="24"
+                            iOS="12"/>
+            </Setter>
+        </Style>-->
+        <!--<Style TargetType="Picker">
+            <Setter Property="Margin">
+                <Setter.Value>
+                    <OnPlatform Android="13,0"
+                                iOS="13,5"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="TextColor" Value="#555555"/>
+        </Style>
+        <Style TargetType="DatePicker">
+            <Setter Property="Margin">
+                <Setter.Value>
+                    <OnPlatform Android="13,0"
+                                iOS="13,5"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="TextColor" Value="#555555"/>
+        </Style>-->
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Horizontal"
+                         Grid.Row="0"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Spacing="10"
+                         Margin="0,20,0,5">
+                    <!--<Frame Style="{StaticResource cr}" />
+                    <Frame Style="{StaticResource cr}"/>-->
+                </StackLayout>
+                <ImageButton Grid.Row="1"
+                         WidthRequest="100"
+                         HeightRequest="100"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         BorderColor="#ECFFFFFF"
+                         BorderWidth="1"
+                         BackgroundColor="#7CFFFFFF"
+                         Source="camera.png"
+                         CornerRadius="50"
+                         Padding="20"
+                         Margin="5,5,5,10"/>
+
+                <Frame Grid.Row="2" Margin="15,9">
+                    <local:MyEntry Placeholder="First Name"/>
+                </Frame>
+                <Frame Grid.Row="3" Margin="15,9">
+                    <local:MyEntry Placeholder="Last Name"/>
+                </Frame>
+                <Frame Grid.Row="4" Margin="15,9">
+                    <local:MyEntry Placeholder="Email Address"/>
+                </Frame>
+                <Frame Grid.Row="5" Margin="15,9">
+                    <local:MyEntry Placeholder="Password"
+                                   IsPassword="True"/>
+                </Frame>
+                <Frame Grid.Row="6" Margin="15,9">
+                    <local:MyEntry Placeholder="Confirm Password"
+                                   IsPassword="True"/>
+                </Frame>
+
+                <Button Text="Register"
+                    Grid.Row="10"
+                    BorderRadius="24"
+                    BackgroundColor="#7EC6D9"
+                    Margin="10,15"
+                    TextColor="#E3FFFFFF"
+                    VerticalOptions="Center"
+                        Clicked="Button_Clicked"/>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

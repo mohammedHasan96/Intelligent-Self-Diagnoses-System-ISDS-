@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:isds="clr-namespace:ISDS"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="ISDS.Views.VQuestion">
+    <NavigationPage.TitleView>
+        <Label Text="Symptom Checker"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="22*"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"
+                      Grid.RowSpan="2">
+                <Image Source="isdsbackground.png"
+                           Aspect="AspectFill"/>
+            </Grid>
+
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="1"
+                       Source="applogo.png"
+                       HeightRequest="70"
+                       WidthRequest="70"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="0,15,0,0"/>
+
+                <Label Text="Disesese"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       Grid.Row="2"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+
+            </Grid>
+
+            <BoxView Grid.Row="1"
+                         BackgroundColor="White"/>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Do you think that you have one of  these Symptoms?"
+                       TextColor="#666666"
+                       Margin="15"
+                       FontAttributes="Bold"
+                       Grid.Row="0"/>
+
+                <input:RadioButtonGroupView Grid.Row="1" 
+                                            Margin="15,0"
+                                            VerticalOptions="Start">
+                    <input:RadioButtonGroupView.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="TextColor" Value="#666666"/>
+                            <Setter Property="FontSize" Value="12"/>
+                        </Style>
+                    </input:RadioButtonGroupView.Resources>
+                    <input:RadioButton x:Name="Q1" Text="Dislikes change in daily routine" TextFontSize="12"/>
+                    <input:RadioButton x:Name="Q2" Text="Difficult to wake from sleep" TextFontSize="12"/>
+                    <input:RadioButton x:Name="Q3" Text="Broken bones (multiple fractures)" TextFontSize="12"/>
+                    <input:RadioButton x:Name="Q4" Text="No" TextFontSize="12"/>
+                </input:RadioButtonGroupView>
+
+                <ProgressBar Margin="10,10"
+                             HeightRequest="1"
+                             Grid.Row="2"
+                             Progress="0.3"/>
+
+                <Button Text="Continue"
+                    Grid.Row="3"
+                    BorderRadius="24"
+                    Margin="10"
+                    BackgroundColor="#7EC6D9"
+                    TextColor="#E3FFFFFF"
+                    VerticalOptions="Center"
+                    Clicked="Button_Clicked"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISDS.Views.UserControls.UCDiseaseDetails">
+    <ContentPage.Style>
+        <Style TargetType="Label">
+
+        </Style>
+    </ContentPage.Style>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="10,15,3,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="" 
+                   x:Name="DiseaseName"
+                   x:FieldModifier="public"
+                   Grid.Row="0"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="#444444"
+                   FontSize="22"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"/>
+                <Label Text="Ethanol intoxication | acute alcohol intoxication"
+                   Grid.Row="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="#444444"
+                   IsVisible="False"
+                   HorizontalTextAlignment="Center"/>
+
+                <Frame BackgroundColor="#444444"
+                   BorderColor="#444444"
+                   Grid.Row="2"
+                   HeightRequest="2"
+                   Padding="0"
+                   CornerRadius="0"
+                   VerticalOptions="Center"
+                   Margin="10"/>
+
+                <Label Text="Symptoms" 
+                   Grid.Row="3"
+                   TextColor="Black"
+                   FontSize="22"/>
+                <Label Text="" 
+                   x:Name="Symptoms"
+                   x:FieldModifier="public"
+                   Grid.Row="4"
+                   TextColor="Black"
+                   FontSize="14"
+                   Margin="0,0,0,15"/>
+                <Label Text="How Common" 
+                   Grid.Row="5"
+                   TextColor="Black"
+                   FontSize="22"/>
+                <Label Text="" 
+                   x:Name="HowCommon"
+                   x:FieldModifier="public"
+                   Grid.Row="6"
+                   TextColor="Black"
+                   FontSize="14"
+                   Margin="0,0,0,15"/>
+                <Label Text="What to Expect" 
+                   Grid.Row="7"
+                   TextColor="Black"
+                   FontSize="22"/>
+                <Label Text="" 
+                   x:Name="WhatToExpect"
+                   x:FieldModifier="public"
+                   Grid.Row="8"
+                   TextColor="Black"
+                   FontSize="14"
+                   Margin="0,0,0,15"/>
+                <Label Text="Made Worsen By" 
+                   Grid.Row="9"
+                   TextColor="Black"
+                   FontSize="22"/>
+                <Label Text="" 
+                   x:Name="MadeWorsenBy"
+                   x:FieldModifier="public"
+                   Grid.Row="10"
+                   TextColor="Black"
+                   FontSize="14"
+                   Margin="0,0,0,15"/>
+                <Label Text="Community" 
+                   Grid.Row="11"
+                   TextColor="Black"
+                   FontSize="22"/>
+                <Label Text="" 
+                   x:Name="Community"
+                   x:FieldModifier="public"
+                   Grid.Row="12"
+                   TextColor="Black"
+                   FontSize="14"
+                   Margin="0,0,0,15"/>
+                <Label Text="Did You Know?" 
+                   Grid.Row="13"
+                   TextColor="Black"
+                   FontSize="22"/>
+                <Label Text="" 
+                   x:Name="DidYouKnow"
+                   x:FieldModifier="public"
+                   Grid.Row="14"
+                   TextColor="Black"
+                   FontSize="14"
+                   Margin="0,0,0,15"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

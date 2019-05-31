@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:isds="clr-namespace:ISDS"
+             x:Class="ISDS.Views.UserControls.UCHome"
+             BackgroundColor="White">
+    <ContentPage.Resources>
+        <Style x:Key="Rounded" TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="#68C8E2"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="7*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0"
+                      Grid.RowSpan="2">
+                    <Image Source="isdsbackground.png"
+                           Aspect="AspectFill"/>
+                </Grid>
+
+            <BoxView Grid.Row="1"
+                         BackgroundColor="White"/>
+
+            <Grid Grid.Row="0"
+                  Grid.RowSpan="2"
+                  Margin="10,20,10,10"
+                  RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0"
+                       Source="applogo.png"
+                       HeightRequest="100"
+                       WidthRequest="100"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="0,15,0,0"/>
+
+                <Frame Grid.Row="1"
+                       Margin="15,5">
+                    <isds:MyEntry Placeholder="Search..."/>
+                </Frame>
+
+                <Image Source="search.png" 
+                       Grid.Row="1"
+                       WidthRequest="25"
+                       HeightRequest="25"
+                       VerticalOptions="Center"
+                       HorizontalOptions="End"
+                       Margin="0,0,30,0"/>
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--*****************************************************-->
+
+                    <Frame CornerRadius="0"
+                           Style="{StaticResource Rounded}"
+                           Grid.Column="1"
+                           VerticalOptions="Start"
+                           HorizontalOptions="Start"
+                           HeightRequest="58"
+                           WidthRequest="58"
+                           Margin="0"/>
+                    <Frame CornerRadius="0"
+                           Style="{StaticResource Rounded}"
+                           Grid.Column="1"
+                           VerticalOptions="End"
+                           HorizontalOptions="Start"
+                           HeightRequest="58"
+                           WidthRequest="58"
+                           Margin="0"/>
+                    <Frame CornerRadius="0"
+                           Style="{StaticResource Rounded}"
+                           Grid.Column="1"
+                           VerticalOptions="Start"
+                           HorizontalOptions="End"
+                           HeightRequest="58"
+                           WidthRequest="58"
+                           Margin="0"/>
+                    <Frame Grid.Column="1"
+                           Style="{StaticResource Rounded}"
+                           CornerRadius="60"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           WidthRequest="115"
+                           HeightRequest="120"
+                           Margin="0">
+                        <StackLayout VerticalOptions="Center">
+                            <Image Source="checker.png"
+                                   WidthRequest="30"
+                                   HeightRequest="30"/>
+                            <Label Text="Symptom Checker" 
+                                   Margin="15,5"
+                                   FontAttributes="Bold"
+                                   FontSize="16"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Frame>
+                    <Button BackgroundColor="Transparent"
+                            Grid.Column="1"
+                            Margin="0"
+                            Padding="0"
+                            Clicked="SymptomChecker_Clicked"/>
+
+                    <!--*****************************************************-->
+
+                    <Frame CornerRadius="0"
+                           Style="{StaticResource Rounded}"
+                           Grid.Column="3"
+                           VerticalOptions="Start"
+                           HorizontalOptions="Start"
+                           HeightRequest="58"
+                           WidthRequest="58"
+                           Margin="0"/>
+                    <Frame CornerRadius="0"
+                           Style="{StaticResource Rounded}"
+                           Grid.Column="3"
+                           VerticalOptions="End"
+                           HorizontalOptions="Start"
+                           HeightRequest="58"
+                           WidthRequest="58"
+                           Margin="0"/>
+                    <Frame CornerRadius="0"
+                           Style="{StaticResource Rounded}"
+                           Grid.Column="3"
+                           VerticalOptions="Start"
+                           HorizontalOptions="End"
+                           HeightRequest="58"
+                           WidthRequest="58"
+                           Margin="0"/>
+                    <Frame Grid.Column="3"
+                           Style="{StaticResource Rounded}"
+                           CornerRadius="60"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           WidthRequest="115"
+                           HeightRequest="120"
+                           Margin="0">
+                        <StackLayout VerticalOptions="Center">
+                            <Image Source="diseases.png"
+                                   WidthRequest="30"
+                                   HeightRequest="30"/>
+                            <Label Text="Diseases" 
+                                   Margin="15,5"
+                                   FontAttributes="Bold"
+                                   FontSize="16"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Button BackgroundColor="Transparent"
+                            Grid.Column="3"
+                            Margin="0"
+                            Padding="0"
+                            Clicked="Diseases_Clicked"/>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--*****************************************************-->
+
+
+                    <Frame CornerRadius="0"
+                           Style="{StaticResource Rounded}"
+                           Grid.Column="1"
+                           VerticalOptions="Start"
+                           HorizontalOptions="Start"
+                           HeightRequest="58"
+                           WidthRequest="58"
+                           Margin="0"/>
+                    <Frame CornerRadius="0"
+                           Style="{StaticResource Rounded}"
+                           Grid.Column="1"
+                           VerticalOptions="End"
+                           HorizontalOptions="Start"
+                           HeightRequest="58"
+                           WidthRequest="58"
+                           Margin="0"/>
+                    <Frame CornerRadius="0"
+                           Style="{StaticResource Rounded}"
+                           Grid.Column="1"
+                           VerticalOptions="Start"
+                           HorizontalOptions="End"
+                           HeightRequest="58"
+                           WidthRequest="58"
+                           Margin="0"/>
+                    <Frame Grid.Column="1"
+                           Style="{StaticResource Rounded}"
+                           CornerRadius="60"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           WidthRequest="115"
+                           HeightRequest="120"
+                           Margin="0">
+                        <StackLayout VerticalOptions="Center">
+                            <Image Source="reminder.png"
+                                   WidthRequest="30"
+                                   HeightRequest="30"/>
+                            <Label Text="Medication Reminders" 
+                                   Margin="15,5"
+                                   FontAttributes="Bold"
+                                   FontSize="16"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Button BackgroundColor="Transparent"
+                            Grid.Column="1"
+                            Margin="0"
+                            Padding="0"/>
+
+                    <!--*****************************************************-->
+
+                    <Frame CornerRadius="0"
+                           Style="{StaticResource Rounded}"
+                           Grid.Column="3"
+                           VerticalOptions="Start"
+                           HorizontalOptions="Start"
+                           HeightRequest="58"
+                           WidthRequest="58"
+                           Margin="0"/>
+                    <Frame CornerRadius="0"
+                           Style="{StaticResource Rounded}"
+                           Grid.Column="3"
+                           VerticalOptions="End"
+                           HorizontalOptions="Start"
+                           HeightRequest="58"
+                           WidthRequest="58"
+                           Margin="0"/>
+                    <Frame CornerRadius="0"
+                           Style="{StaticResource Rounded}"
+                           Grid.Column="3"
+                           VerticalOptions="Start"
+                           HorizontalOptions="End"
+                           HeightRequest="58"
+                           WidthRequest="58"
+                           Margin="0"/>
+                    <Frame Grid.Column="3"
+                           Style="{StaticResource Rounded}"
+                           CornerRadius="60"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           WidthRequest="115"
+                           HeightRequest="120"
+                           Margin="0">
+                        <StackLayout VerticalOptions="Center">
+                            <Image Source="history.png"
+                                   WidthRequest="30"
+                                   HeightRequest="30"/>
+                            <Label Text="Checker History" 
+                                   Margin="15,5"
+                                   FontAttributes="Bold"
+                                   FontSize="16"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Button BackgroundColor="Transparent"
+                            Grid.Column="3"
+                            Margin="0"
+                            Padding="0"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

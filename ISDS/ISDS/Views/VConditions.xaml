@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:isds="clr-namespace:ISDS"
+             x:Class="ISDS.Views.VConditions">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal"
+                     Margin="5"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <Label Text="Disesese"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="18"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="17*"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"
+                      Grid.RowSpan="2">
+                <Image Source="isdsbackground.png"
+                           Aspect="AspectFill"/>
+            </Grid>
+
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0"
+                       Source="applogo.png"
+                       HeightRequest="50"
+                       WidthRequest="50"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="0,15,0,0"/>
+
+                <Label Text="Disesese"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       Grid.Row="1"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+
+                <Frame Grid.Row="2"
+                       Margin="15,5">
+                    <isds:MyEntry Placeholder="Search..."
+                                  TextChanged="MyEntry_TextChanged"/>
+                </Frame>
+
+                <Image Source="search.png" 
+                       Grid.Row="2"
+                       WidthRequest="25"
+                       HeightRequest="25"
+                       VerticalOptions="Center"
+                       HorizontalOptions="End"
+                       Margin="0,0,30,0"/>
+            </Grid>
+
+            <BoxView Grid.Row="1"
+                         BackgroundColor="White"/>
+
+            <ListView Grid.Row="1"
+                      x:Name="diseasesList"
+                      ItemTapped="DiseasesList_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding DiseaseName}"
+                                   TextColor="Black"
+                                   Margin="5"
+                                   VerticalOptions="Center"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Grid Grid.RowSpan="2"
+                  BackgroundColor="#55333333"
+                  x:Name="IsActive">
+                <ActivityIndicator HeightRequest="50"
+                                   WidthRequest="50"
+                                   IsRunning="True"
+                                   IsVisible="True"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"/>
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
